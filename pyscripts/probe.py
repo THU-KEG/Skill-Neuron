@@ -86,7 +86,7 @@ def main():
 
 
     if(args.probe_type == "acc"):
-        torch.save(t.probe_avg(valid),args.save_to + "/train_avg")
+        torch.save(t.probe_avg(train),args.save_to + "/train_avg")
         torch.save(t.probe_acc(valid, args.save_to + "/train_avg"),args.save_to+"/dev_perf")
         torch.save(t.probe_acc(test, args.save_to + "/train_avg"),args.save_to+"/test_perf")
 

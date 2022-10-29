@@ -51,10 +51,10 @@ After training, a directory named *example* will be created and it will contain 
     - RobertaAdapter: Bias Tuning model with roberta-base backbone
     - RobertaPrunePrompt: prompt model with pruned roberta-base backbone using skill neuron
     - One can modify *pyscripts/modelzoo.py* and *getmodel() in pyscripts/trainer.py* to add a new model
-- prompt_size, the length of prompt, prompt is inserted at beginning for MLM model (begin with a frozen [MASK]) and at the end for GPT model.
+- prompt_size, the length of prompt, prompt is inserted at beginning for MLM model (begin with a frozen [MASK]).
 - p, whether to load a pretrained model, store true
 - save_to, directory to save the model
-- resume_from, directory to load the pretrained model
+- resume_from, directory to load the trained prompt/adapter/bias
 - task_type, choose from the dataset in dataset.py
 - data_path, directory to the dataset
 - verb, verbalizer for the task, when left brank, will use default
