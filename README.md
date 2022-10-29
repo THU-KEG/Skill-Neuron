@@ -47,8 +47,6 @@ After training, a directory named *example* will be created and it will contain 
 
 - model_type, we currently support
     - RobertaPrompt: prompt model with frozen roberta-base backbone
-    - BertPrompt: prompt model with frozen bert-base backbone
-    - T5Prompt: prompt model with frozen t5-base backbone (encoder only)
     - RobertaBias: Bias Tuning model with roberta-base backbone
     - RobertaAdapter: Bias Tuning model with roberta-base backbone
     - RobertaPrunePrompt: prompt model with pruned roberta-base backbone using skill neuron
