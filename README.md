@@ -39,7 +39,7 @@ The dataset will be split into two subdataset.
 
 After the data is prepared, one should proceed to train the model using the script *pyscripts/train.py*. A sample usage would be like
 
-> python3 pyscripts/train.py --task_type sst2 --data_path saber/data/raw/sst2 --save_to example --bz 128 --eval_every_step 2000 --model_type RobertaPrompt
+> python3 pyscripts/train.py --task_type sst2 --data_path data/raw/sst2 --save_to example --bz 128 --eval_every_step 2000 --model_type RobertaPrompt
 
 After training, a directory named *example* will be created and it will contain trained prompt named as *best-backbone* and also optimizer and scheduler named *optimzer* and *scheduler*. In case the training is interrupted, one can proceed from the previous best checkpoint using the following args *--resume_from example -p*.
 
@@ -95,7 +95,7 @@ After probing, a directory named *example/sst2* will be created and three files 
 
 After the probing in the previous section, one can use the accuracy found to generate skill neuron via *pyscripts/skillneuron.py*. A sample code would be like 
 
-> python3 pyscripts/skillneuron.py --save_to example -a saber/example/sst2/dev_perf
+> python3 pyscripts/skillneuron.py --save_to example -a example/sst2/dev_perf
 
 *pyscripts/skillneuron.py* has the following args.
 
@@ -136,7 +136,7 @@ This will create a prune model at example/prune/best-backbone, one can further e
 > python3 pyscripts/probe.py -p --resume_from example/prune --model_type RobertaPrunePrompt --save_to example/prune --probe_type speed --data_path data/raw/sst2 
 
 or further train the model by
-> python3 pyscripts/train.py -p --resume_from example/prune --model_type RobertaPrunePrompt --task_type sst2 --data_path saber/data/raw/sst2 --save_to example/prune --bz 128 --eval_every_step 2000
+> python3 pyscripts/train.py -p --resume_from example/prune --model_type RobertaPrunePrompt --task_type sst2 --data_path  data/raw/sst2 --save_to example/prune --bz 128 --eval_every_step 2000
 
 *pyscripts/prune.py* now support only the pruning of RobertaPrompt model to RobertaPrunePrompt model. It contains the following args.
 
