@@ -1,6 +1,6 @@
 # Mainly two types of probing
 # One to find all the activation of some specific neuron
-# One to find the accuracy of all the neuron
+# One to find the predictivity of all the neuron
 from cgi import test
 import os
 import log

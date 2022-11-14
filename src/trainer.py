@@ -14,12 +14,6 @@ from transformers import get_linear_schedule_with_warmup
 from transformers.data.metrics import glue_compute_metrics
 from torch.utils.data import RandomSampler,DataLoader,SequentialSampler,Dataset
 
-
-
-
-
-
-
 '''trainer class'''
 class trainer:
     def __init__(self, args):

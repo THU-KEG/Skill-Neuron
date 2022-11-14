@@ -1,6 +1,3 @@
-# Mainly two types of probing
-# One to find all the activation of some specific neuron
-# One to find the accuracy of all the neuron
 import os
 import log
 import torch
