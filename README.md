@@ -1,11 +1,8 @@
-# README of Skill Neuron V1.0
-
-This is the codebase for paper *Finding Skill Neurons in Pre-trained Transformers via Prompt Tuning*. Using this repo, you can find skill neuron, analyze their causal effect on the model performance and prune model using the skill neuron you found. Let's motivate by an example.
-
+Source code and dataset for EMNLP 2022 paper "Finding Skill Neurons in Pre-trained Transformer-based Language Models".
 
 ## Data Preparation
 
-The data can be downloaded using the link https://cloud.tsinghua.edu.cn/d/fd753ed7b9f94a099cef/
+The data can be downloaded [here](https://cloud.tsinghua.edu.cn/d/fd753ed7b9f94a099cef).
 
 One should generate the prune structure by first run the following scripts
 
