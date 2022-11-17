@@ -1,4 +1,4 @@
-Source code and dataset for EMNLP 2022 paper "Finding Skill Neurons in Pre-trained Transformer-based Language Models".
+Source code and dataset for EMNLP 2022 paper ["Finding Skill Neurons in Pre-trained Transformer-based Language Models"](https://arxiv.org/abs/2211.07349).
 
 ## Data Preparation
 
@@ -159,4 +159,12 @@ python src/train.py -p --resume_from example/prune --model_type RobertaPruneProm
 - `save_to`, `random_seed`: as introduced above
 
 ## Citation
-TBD
+If the codes help you, please cite our paper:
+```bibtex
+@inproceedings{wang-wen-etal2022skill,
+  title = {Finding Skill Neurons in Pre-trained Transformer-based Language Models},
+  author = {Xiaozhi Wang and Kaiyue Wen and Zhengyan Zhang and Lei Hou and Zhiyuan Liu and Juanzi Li},
+  booktitle = {Proceedings of EMNLP},
+  year = {2022},
+}
+```
