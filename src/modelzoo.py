@@ -213,12 +213,12 @@ class AdapterBaseModel(BaseModel):
 ### RobertaPrompt
 class RobertaPrompt(MLMPromptBaseModel):
     def __init__(self, args):
-        self.tokenizer= AutoTokenizer.from_pretrained(modelpath+"roberta-base")
+        self.tokenizer= AutoTokenizer.from_pretrained("roberta-base")
         self.layer_num = 12
         self.layer_width = 3072
         super().__init__(args)
     def getmodel(self):
-        self.backbone= AutoModelForMaskedLM.from_pretrained(modelpath+"roberta-base")
+        self.backbone= AutoModelForMaskedLM.from_pretrained("roberta-base")
     def processoutput(self, outputs):
         return outputs.logits[:,0,self.pos].squeeze(dim = 1)
     def intermediate(self,n):
@@ -232,7 +232,7 @@ class RobertaPrompt(MLMPromptBaseModel):
 
 class RobertaPrunePrompt(MLMPromptBaseModel):
     def __init__(self, args):
-        self.tokenizer= AutoTokenizer.from_pretrained(modelpath+"roberta-base")
+        self.tokenizer= AutoTokenizer.from_pretrained("roberta-base")
         self.layer_num = 12
         self.layer_width = 3072
         super().__init__(args)
