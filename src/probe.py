@@ -71,8 +71,8 @@ def main():
         t.load(args.resume_from)
 
     # Test subnetwork temporary
-    if args.add_mask:
-        t.addmask(args.add_mask, thspath = args.ths_path ,cmp = False)
+    # if args.add_mask:
+    #     t.addmask(args.add_mask, thspath = args.ths_path ,cmp = False)
 
 
 
