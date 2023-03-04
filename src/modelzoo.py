@@ -101,9 +101,9 @@ class PromptBaseModel(BaseModel):
         parameter["pos"] = self.pos
         torch.save(parameter,path + "-backbone")
     def load(self, path):
-        if(self.args.load_backbone):
-            print("loading backbone from "+self.args.load_backbone)
-            self.backbone.load_state_dict(torch.load(self.args.load_backbone))
+        # if(self.args.load_backbone):
+        #     print("loading backbone from "+self.args.load_backbone)
+        #     self.backbone.load_state_dict(torch.load(self.args.load_backbone))
         if(self.args.from_pretrained):
             parameter = torch.load(path + "-backbone")
             state = self.state_dict()
