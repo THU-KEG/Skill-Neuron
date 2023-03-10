@@ -120,7 +120,7 @@ datasetColumn = {
     "hate":["train"],
     "hate-pn":["train"],
     "hate-neu":["train"],
-    "imdb":["train","test"],
+    "imdb":["train","validation"],
     "justice":["train","validation","test"],
     "tweet_eval":["train","validation","test"],
     "tweet_eval-pn":["train","validation","test"],
