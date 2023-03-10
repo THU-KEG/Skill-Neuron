@@ -197,6 +197,7 @@ datasetType = {
 }
 
 def getDataset(taskName,path):
+    print(f'### Task Name = {taskName} ###')
     if(datasetType.get(taskName,"hugging") != "hugging"):
         train = datasetType[taskName](path+"/train.csv")
         train, valid = split(dataset = train, lengths = [int(0.8*len(train)),len(train)-int(0.8*len(train))])
